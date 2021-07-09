@@ -9,7 +9,7 @@ import java.io.IOException;
 public class FileRead {
 
 	public static void main(String[] args) {
-		File file = new File("D:/Practice/Source/FileWrite.txt");
+		File file = new File("D:/Practice/Source/Write.txt");
 		
 		BufferedInputStream bis = null;
 		FileInputStream fis = null;
