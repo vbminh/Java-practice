@@ -17,7 +17,7 @@ public class SwingJLabel{
 
 	private void prepareGUI() {
 		fr = new JFrame("Hi! I'm Vu Binh Minh");
-		fr.setSize(300,400);
+		fr.setSize(600,400);
 		fr.setLayout(new GridLayout(3,2));
 		fr.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
@@ -44,6 +44,7 @@ public class SwingJLabel{
 	
 	private void Demo() {
 		headerLabel.setText("Control in action: JLable");
+		statusLabel.setText("love u");
 		JLabel label = new JLabel("",JLabel.CENTER);
 		
 		label.setText("My love is Nguyen Ha Trang");
