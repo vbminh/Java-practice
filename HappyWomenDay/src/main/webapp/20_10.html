@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>20/10</title>
+	<link rel="stylesheet" type="text/css" href="NewFile.css">
+	<script type="text/javascript" src="20_10.js"></script>
+
+
+</head>
+
+<body>
+
+	<script src="https://rawcdn.githack.com/akzhy/Vara/16e30acca2872212e28735cfdbaba696a355c780/src/vara.min.js">
+	</script>
+	<div id="container"></div>
+	<canvas id="canvas">
+	</canvas>
+
+</body>
+<script>
+	var vara = new Vara("#container",
+		"https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
+		[
+			{
+				text: "Happy",
+				fontSize: 60,
+				color: "#F7FE2E",
+				y: 10,
+			},
+			{
+				text: "Vietnamese Women's Day",
+				fontSize: 50,
+				color: "#F7FE2E",
+			},
+			{
+				text: "Best wishes to you all on your day. Always shine and smile!",
+				fontSize: 35,
+				color: "#FFF"
+			}
+			
+		], {
+			strokeWidth: 2,
+			textAlign: "center"
+		});
+</script>
+
+</html>
