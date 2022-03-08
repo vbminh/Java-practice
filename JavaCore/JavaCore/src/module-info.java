@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Sunshine
+ *
+ */
+module JavaCore {
+}

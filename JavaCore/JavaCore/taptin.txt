@@ -1,0 +1,4 @@
+3
+3
+1 4 7 -1 0 6 -5 10 2
+Tong cac phan tu cua mang la 24
