@@ -1,7 +1,7 @@
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,25 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
    
    private static final long serialVersionUID = 1L;
-
+   private String message;
    
    public HelloServlet() {
    }
 
+   public void init() throws ServletException {
+	   message = "Hello everyone, I'm Minh";
+   }
+   
    @Override
-   protected void doGet(HttpServletRequest request,
-           HttpServletResponse response) throws ServletException, IOException {
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+		   throws ServletException, IOException {
        
-       ServletOutputStream out = response.getOutputStream();
-       
-       out.println("<html>");
-       out.println("<head><title>Hello Servlet</title></head>");
-       
-       out.println("<body>");
-       out.println("<h3>Hello World</h3>");
-       out.println("This is my first Servlet. My name is Minh");
-       out.println("</body>");
-       out.println("<html>");
+	   response.setContentType("text/html");
+       PrintWriter out = response.getWriter();
+       out.println("<h1>" + message + "</h1>");
    }
 
    @Override
@@ -37,4 +34,7 @@ public class HelloServlet extends HttpServlet {
        this.doGet(request, response);
    }
 
+   public void destroy() {
+	   
+   }
 }

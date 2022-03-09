@@ -3,6 +3,86 @@
   <display-name>DemoServlet</display-name>
   
   <servlet>
+  	<servlet-name>DeleteCookie</servlet-name>
+  	<servlet-class>DeleteCookie</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DeleteCookie</servlet-name>
+  	<url-pattern>/DeleteCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ReadCookie</servlet-name>
+  	<servlet-class>ReadCookie</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ReadCookie</servlet-name>
+  	<url-pattern>/ReadCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>CreateCookie</servlet-name>
+  	<servlet-class>CreateCookie</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CreateCookie</servlet-name>
+  	<url-pattern>/CreateCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoStatus</servlet-name>
+  	<servlet-class>DemoStatus</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoStatus</servlet-name>
+  	<url-pattern>/DemoStatus</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoResponse</servlet-name>
+  	<servlet-class>DemoResponse</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoResponse</servlet-name>
+  	<url-pattern>/DemoResponse</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoRequest</servlet-name>
+  	<servlet-class>DemoRequest</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoRequest</servlet-name>
+  	<url-pattern>/DemoRequest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoReadParams</servlet-name>
+  	<servlet-class>DemoReadParams</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoReadParams</servlet-name>
+  	<url-pattern>/DemoReadParams</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoCheckBox</servlet-name>
+  	<servlet-class>DemoCheckBox</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoCheckBox</servlet-name>
+  	<url-pattern>/DemoCheckBox</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<servlet-name>helloServlet</servlet-name>
   	<servlet-class>HelloServlet</servlet-class>
   </servlet>
@@ -11,7 +91,31 @@
   	<servlet-name>helloServlet</servlet-name>
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoDoPost</servlet-name>
+  	<servlet-class>DemoDoPost</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoDoPost</servlet-name>
+  	<url-pattern>/DemoDoPost</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DemoDoGet</servlet-name>
+  	<servlet-class>DemoDoGet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DemoDoGet</servlet-name>
+  	<url-pattern>/DemoDoGet</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
+    <welcome-file>Form.html</welcome-file>
+    <welcome-file>Form.htm</welcome-file>
+    <welcome-file>Form.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
