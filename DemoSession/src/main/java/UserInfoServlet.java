@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -22,13 +23,14 @@ public class UserInfoServlet extends HttpServlet{
 		ServletOutputStream out = resp.getOutputStream();
 		
 		HttpSession session = req.getSession();
-		Integer visitCount = (Integer) session.getAttribute("VisitCount");
-		session.setAttribute("VisitCount", visitCount);
 		
 		UserInfo loginedinfo = (UserInfo) session.getAttribute("User_Key");
 		
+		Date createTime = new Date(session.getCreationTime());
+		Date lastAccessTime = new Date(session.getLastAccessedTime());
+		
 		if(loginedinfo == null) {
-			resp.sendRedirect(this.getServletContext().getContextPath() + "/login");
+			resp.sendRedirect(this.getServletContext().getContextPath() + "/Login");
 			return;
 		}
 			
@@ -41,12 +43,12 @@ public class UserInfoServlet extends HttpServlet{
 		out.println("<body>");
 		out.println("<h1 align = \"center\">User Information</h1>");
 		out.println("Id: " + session.getId());
-		out.println("Username: " + loginedinfo.getUserName());
-		out.println("Country: " + loginedinfo.getCountry());
-		out.println("Post: " + loginedinfo.getPost());
-		out.println("Creat time: " + session.getCreationTime());
-		out.println("Last accessed time: " + session.getLastAccessedTime());
-		out.println("Number of visits: " + (visitCount + 1));
+		out.println("<br>Username: " + loginedinfo.getUserName());
+		out.println("<br>Country: " + loginedinfo.getCountry());
+		out.println("<br>Post: " + loginedinfo.getPost());
+		out.println("<br>Creat time: " + createTime);
+		out.println("<br>Last accessed time: " + lastAccessTime);
 		out.println("</body>\n</html>");
+		
 	}
 }

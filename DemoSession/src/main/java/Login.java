@@ -34,7 +34,8 @@ public class Login extends HttpServlet{
 		out.println("<title>Login</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<a href='/userinfo' style=\"text-decoration: none;\">View user infomation</a>");
+		out.println("<h1 align = \"center\">Welcome to my website</h1>");
+		out.println("<a href='UserInfoServlet' style=\"text-decoration: none;\">&emsp;View user infomation</a>");
 		out.println("</body>\n</html>");
 	}
 }
