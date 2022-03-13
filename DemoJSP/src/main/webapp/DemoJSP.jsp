@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,6 +8,12 @@
 <title>Demo JSP</title>
 </head>
 <body>
-	<h1>Hello every, I'm Vu Binh Minh</h1>
+	<%
+		Date date = new Date();
+	%>
+	
+	<h2>Now is 
+		<%= date.toString() %>
+	</h2>
 </body>
 </html>
