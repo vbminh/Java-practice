@@ -14,7 +14,7 @@ public class DemoStatus extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.sendError(404, "Error: Not Found. Author: Binh Minh");
+		resp.sendError(404, "Error: loi roi kia");
 	}
 	
 	@Override
