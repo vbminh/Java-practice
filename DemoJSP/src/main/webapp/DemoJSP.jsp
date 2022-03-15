@@ -15,5 +15,6 @@
 	<h2>Now is 
 		<%= date.toString() %>
 	</h2>
+	<h3>My name is Minh</h3>
 </body>
 </html>
