@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import Model.Account;
 import Model.Person;
 
@@ -86,5 +87,32 @@ public class DBUtils {
 		return null;
 	}
 	
+	public static void updatePerson(Connection conn, Person person) throws SQLException {
+		String sql = "Update Person set ID = ?, Name = ?, Age = ?";
+		
+		PreparedStatement pstm = conn.prepareStatement(sql);
+		pstm.setInt(1, person.getId());
+		pstm.setString(2, person.getName());
+		pstm.setInt(3, person.getAge());
+		pstm.executeQuery();
+	}
+	
+	public void insertPerson(Connection conn, Person person) throws SQLException {
+		String sql = "Insert into Person(ID,Name,Age) values (?,?,?)";
+		
+		PreparedStatement pstm = conn.prepareStatement(sql);
+		pstm.setInt(1, person.getId());
+		pstm.setString(2, person.getName());
+		pstm.setInt(3, person.getAge());
+		pstm.executeQuery();
+	}
+	
+	public void deletePerson(Connection conn, Person person) throws SQLException {
+		String sql = "Delete from Person where ID = ?";
+		
+		PreparedStatement pstm = conn.prepareStatement(sql);
+		pstm.setInt(1, person.getId());
+		pstm.executeQuery();
+	}
 	
 }
