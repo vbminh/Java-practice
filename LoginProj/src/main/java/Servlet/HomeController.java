@@ -23,6 +23,7 @@ public class HomeController extends HttpServlet{
 		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/View/menu.jsp");
 		rd.forward(req, resp);
 	}
+//Minh
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
