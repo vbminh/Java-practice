@@ -31,7 +31,7 @@ public class Login extends HttpServlet{
 				+ "transitional//en\">");
 		out.println("<html>");
 		out.println("<head>\n<meta charset=\"UTF-8\">");
-		out.println("<title>Login</title>");
+		out.println("<title>Login Controller</title>");
 		out.println("</head>");
 		out.println("<body>");
 		out.println("<h1 align = \"center\">Welcome to my website</h1>");
