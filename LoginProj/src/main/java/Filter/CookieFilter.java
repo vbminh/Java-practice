@@ -59,6 +59,7 @@ public class CookieFilter implements Filter{
 			session.setAttribute("COOKIE_CHECK", "CHECK");
 		}
 		chain.doFilter(request, response);
+//ádfaf
 	}
 	
 	
