@@ -4,6 +4,7 @@ public class HCN {
 	private double D, R;
 	
 	public HCN() {
+		//hello
 		
 	}
 	
