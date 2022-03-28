@@ -14,7 +14,6 @@ public class Login extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	public Login() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
