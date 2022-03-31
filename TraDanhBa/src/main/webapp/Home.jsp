@@ -7,7 +7,7 @@
 <title>home</title>
 </head>
 <body>
-	<form action="">
+	<form action="InforController" method="post">
 		<h1 align="center">Demo web tra thong tin danh ba</h1>
 		<br>
 		<table style="width: 300px; font-size: 15px;">
