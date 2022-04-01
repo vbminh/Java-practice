@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Servlet" path="/Servlet" reloadable="true" source="org.eclipse.jst.jee.server:Servlet"/><Context docBase="HappyWomenDay_2010" path="/HappyWomenDay_2010" reloadable="true" source="org.eclipse.jst.jee.server:HappyWomenDay_2010"/><Context docBase="DemoServlet" path="/DemoServlet" reloadable="true" source="org.eclipse.jst.jee.server:DemoServlet"/><Context docBase="DemoDoGet" path="/DemoDoGet" reloadable="true" source="org.eclipse.jst.jee.server:DemoDoGet"/><Context docBase="DemoSession" path="/DemoSession" reloadable="true" source="org.eclipse.jst.jee.server:DemoSession"/><Context docBase="DemoJSP" path="/DemoJSP" reloadable="true" source="org.eclipse.jst.jee.server:DemoJSP"/><Context docBase="LoginProj" path="/LoginProj" reloadable="true" source="org.eclipse.jst.jee.server:LoginProj"/><Context docBase="DemoSecurityWeb" path="/DemoSecurityWeb" reloadable="true" source="org.eclipse.jst.jee.server:DemoSecurityWeb"/><Context docBase="TraDanhBa" path="/TraDanhBa" reloadable="true" source="org.eclipse.jst.jee.server:TraDanhBa"/></Host>
+      <Context docBase="DemoLogin" path="/DemoLogin" reloadable="true" source="org.eclipse.jst.jee.server:DemoLogin"/></Host>
     </Engine>
   </Service>
 </Server>
