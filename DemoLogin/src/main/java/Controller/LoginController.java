@@ -1,4 +1,4 @@
-package Model.Controller;
+package Controller;
 
 import java.io.IOException;
 
@@ -41,6 +41,6 @@ public class LoginController extends HttpServlet{
 			dis.forward(req, resp);
 		}
 		else
-			System.out.println("sos");
+			resp.sendRedirect("Login.jsp");
 	}
 }

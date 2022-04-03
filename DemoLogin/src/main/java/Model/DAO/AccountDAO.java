@@ -20,6 +20,9 @@ public class AccountDAO {
 	
 	public static Connection getMySQLConnection(String hostName, String dbName,
 			String userName, String password) throws SQLException, ClassNotFoundException {
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		
 		String connURL = "jdbc:mysql://" + hostName + ":3306/" + dbName;
 		
 		Connection conn = DriverManager.getConnection(connURL,userName,password);

@@ -13,7 +13,7 @@
 %>
 </head>
 <body>
-	<h2 align="center">Welcome<%=account.getUsername()%></h2>
+	<h2 align="center">Welcome <%=account.getUsername()%></h2>
 	<label>Name: </label><%=account.getName() %><br>
 	<label>Age: </label><%=account.getAge() %><br>
 	<label>Address: </label><%=account.getAddress() %><br>

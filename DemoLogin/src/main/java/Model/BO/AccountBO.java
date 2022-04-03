@@ -11,16 +11,16 @@ public class AccountBO {
 	}
 	
 	public boolean checkLogin(String username, String password) {
-		if(username == null || username.length() < 3)
+		if(username == null)
 			return false;
-		if(password == null || password.length() < 6)
+		if(password == null)
 			return false;
 		boolean result = accountDAO.checkLogin(username, password);
 		return result;
 	}
 	
 	public Account getAccount(String username) {
-		if(username == null || username.length() < 3)
+		if(username == null)
 			return null;
 		Account account = accountDAO.getAccount(username);
 		return account;
