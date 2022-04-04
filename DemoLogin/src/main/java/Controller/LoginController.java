@@ -33,14 +33,22 @@ public class LoginController extends HttpServlet{
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		
+		String error = "a";
 		AccountBO accountBO = new AccountBO();
-		if(accountBO.checkLogin(username, password)) {
+		
+		if(accountBO.checkLogin(username, password)) {			
 			Account account = accountBO.getAccount(username);
 			req.setAttribute("account", account);
 			RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Information.jsp");
 			dis.forward(req, resp);
 		}
-		else
-			resp.sendRedirect("Login.jsp");
+		else {
+			error = "username or password invalid!";
+			req.setAttribute("ErrorString", error);
+			RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Login.jsp");
+			dis.forward(req, resp);
+		}
+			 
+			
 	}
 }

@@ -5,11 +5,16 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Login</title>
+	<% 
+		String error = (String)request.getAttribute("ErrorString"); 
+		if(error == null)
+			error = "";
+	%>
 </head>
 <body>
 	<h1 align="center">Demo Login Web</h1>
 	
-	<p style="color: red;">${ErrorString}</p>
+	<p style="color: red;" align="center"><%=error%></p>
 	
 	<form name="LoginForm" action="LoginController" method="post" onsubmit="checkLogin()">
 		<div align="center" style="font-size: 20px;">
@@ -24,8 +29,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<div class="recaptcha" 
-							data-sitekey="6LczbUAfAAAAACGmUEhvDUkVDimZwrz0VviW4Pc5"></div>
+						<div class="g-recaptcha" data-sitekey="6LczbUAfAAAAACGmUEhvDUkVDimZwrz0VviW4Pc5"></div>
 					</td>
 				</tr>
 				<tr height="40px;">
@@ -38,7 +42,8 @@
 		</div>	
 	</form>
 	
-	<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=vi">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script type="text/javascript" >
 	function checkLogin() {
      	var username = document.LoginForm.username.value;
      	var password = document.LoginForm.password.value;
