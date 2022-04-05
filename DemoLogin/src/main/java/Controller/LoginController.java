@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Model.BO.AccountBO;
 import Model.Bean.Account;
+import reCaptcha.Verify;
 
 public class LoginController extends HttpServlet{
 
@@ -34,9 +35,13 @@ public class LoginController extends HttpServlet{
 		String password = req.getParameter("password");
 		
 		String error = "a";
+		boolean valid;
 		AccountBO accountBO = new AccountBO();
 		
-		if(accountBO.checkLogin(username, password)) {			
+		if(accountBO.checkLogin(username, password)) {	
+			String gvalid = req.getParameter("g-recaptcha-response");
+			valid = Verify.verify(gvalid);
+			System.out.println(valid + "--" + gvalid);
 			Account account = accountBO.getAccount(username);
 			req.setAttribute("account", account);
 			RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Information.jsp");
