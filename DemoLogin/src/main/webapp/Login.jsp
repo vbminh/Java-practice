@@ -45,13 +45,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript" >
 	function checkLogin() {
-     	var username = document.LoginForm.username.value;
-     	var password = document.LoginForm.password.value;
      	
-    	if(username == null || username == "")
-    		alert("You must enter your username");
-    	if(password == null || password == "")
-    		alert("You must enter your password");
 	}
 	</script>
 </body>

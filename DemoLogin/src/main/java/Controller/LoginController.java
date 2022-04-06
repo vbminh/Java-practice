@@ -34,26 +34,33 @@ public class LoginController extends HttpServlet{
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		
-		String error = "a";
-		boolean valid;
+		String error = null;
 		AccountBO accountBO = new AccountBO();
 		
-		if(accountBO.checkLogin(username, password)) {	
-			String gvalid = req.getParameter("g-recaptcha-response");
-			valid = Verify.verify(gvalid);
-			System.out.println(valid + "--" + gvalid);
-			Account account = accountBO.getAccount(username);
-			req.setAttribute("account", account);
-			RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Information.jsp");
-			dis.forward(req, resp);
+		String gvalid = req.getParameter("g-recaptcha-response");
+		boolean valid = Verify.verify(gvalid);
+		
+		if(valid == true) {
+			if(accountBO.checkLogin(username, password)) {	
+				Account account = accountBO.getAccount(username);
+				req.setAttribute("account", account);
+				RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Information.jsp");
+				dis.forward(req, resp);
+			}
+			else {
+				error = "username or password invalid!";
+				req.setAttribute("ErrorString", error);
+				RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Login.jsp");
+				dis.forward(req, resp);
+			}
 		}
 		else {
-			error = "username or password invalid!";
+			error ="ReCaptcha invalid!";
 			req.setAttribute("ErrorString", error);
 			RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Login.jsp");
 			dis.forward(req, resp);
 		}
-			 
 			
 	}
+	
 }
