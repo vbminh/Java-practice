@@ -16,7 +16,7 @@
 	
 	<p style="color: red;" align="center"><%=error%></p>
 	
-	<form name="LoginForm" action="LoginController" method="post" onsubmit="checkLogin()">
+	<form name="LoginForm" action="LoginController" method="post" >
 		<div align="center" style="font-size: 20px;">
 			<table>
 				<tr height="40px;">
@@ -42,11 +42,6 @@
 		</div>	
 	</form>
 	
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	<script type="text/javascript" >
-	function checkLogin() {
-     	
-	}
-	</script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Information</title>
+<title>Home</title>
 <%
 	Account account = (Account) request.getAttribute("account");
 	if(account == null)
@@ -13,10 +13,12 @@
 %>
 </head>
 <body>
-	<h2 align="center">Home</h2>
-	<label>Name: </label><%=account.getName() %><br>
-	<label>Age: </label><%=account.getAge() %><br>
-	<label>Address: </label><%=account.getAddress() %><br>
-	<label>Phone number: </label><%=account.getPhoneNumber() %>
+	<h2 align="center">Welcome <%=account.getUsername()%></h2>
+	<div align="center" style="text-decoration: none;">
+		<a href="#">Information</a>
+		<a href="#">Add</a>
+		<a href="#">Edit</a>
+		<a href="#">Delete</a>
+	</div>
 </body>
 </html>

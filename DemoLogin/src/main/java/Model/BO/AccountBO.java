@@ -25,4 +25,5 @@ public class AccountBO {
 		Account account = accountDAO.getAccount(username);
 		return account;
 	}
+	
 }
