@@ -46,7 +46,7 @@ public class LoginController extends HttpServlet{
 				if(accountBO.checkLogin(username, password)) {	
 					Account account = accountBO.getAccount(username);
 					req.setAttribute("account", account);
-					RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Information.jsp");
+					RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Home.jsp");
 					dis.forward(req, resp);
 				}
 				else {
