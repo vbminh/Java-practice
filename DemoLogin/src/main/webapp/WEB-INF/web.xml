@@ -3,13 +3,13 @@
   <display-name>DemoLogin</display-name>
   
   <servlet>
-  	<servlet-name>HomeController</servlet-name>
-  	<servlet-class>Controller.HomeController</servlet-class>
+  	<servlet-name>ShowInfServlet</servlet-name>
+  	<servlet-class>Controller.ShowInfServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>HomeController</servlet-name>
-  	<url-pattern>/HomeController</url-pattern>
+  	<servlet-name>ShowInfServlet</servlet-name>
+  	<url-pattern>/ShowInfServlet</url-pattern>
   </servlet-mapping>
   
   <servlet>

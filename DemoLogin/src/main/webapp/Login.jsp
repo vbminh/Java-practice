@@ -16,7 +16,7 @@
 	
 	<p style="color: red;" align="center"><%=error%></p>
 	
-	<form name="LoginForm" action="LoginController" method="post" >
+	<form action="LoginController" method="post" >
 		<div align="center" style="font-size: 20px;">
 			<table>
 				<tr height="40px;">
@@ -35,7 +35,7 @@
 				<tr height="40px;">
 					<td colspan="2" align="center">
 						<input type="submit" name="Submit" value="Submit">
-						&ensp;<input type="reset" name="Reset" value="Reset">
+						&ensp;<input type="reset" name="Cancel" value="Cancel">
 					</td>
 				</tr>
 			</table>
