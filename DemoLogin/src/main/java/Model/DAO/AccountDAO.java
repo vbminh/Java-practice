@@ -2,6 +2,7 @@ package Model.DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -78,5 +79,49 @@ public class AccountDAO {
 			e.printStackTrace();
 		}
 		return account;
+	}
+	
+	public static void addAccount(Account account) {
+		Connection conn;
+		try {
+			conn = getMySQLConnection();
+			String sql = "Insert into account(Username,Password,HoTen,Tuoi,DiaChi,SDT)" + 
+				" values(\"" + account.getUsername() + "\",\"" + account.getPassword() + 
+				"\",\"" + account.getName() + "\"," + account.getAge() + ",\"" +
+				account.getAddress() + "\",\"" + account.getPhoneNumber() + "\")";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.execute(sql);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void UpdateAccount(Account account) {
+		Connection conn;
+		try {	
+			conn = getMySQLConnection();
+			String sql = "Update account set HoTen=\"" + account.getName() + "\", Tuoi=" +
+				account.getAge() + ", DiaChi=\"" + account.getAddress() + "\", SDT=\"" + 
+				account.getPhoneNumber() + "\" where Username=\"" + account.getUsername() + "\"";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.execute(sql);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void DelAccount(Account account) {
+		Connection conn;
+		try {
+			conn = getMySQLConnection();
+			String sql = "Delete from account where Username=\"" + account.getUsername() + "\"";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.execute(sql);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

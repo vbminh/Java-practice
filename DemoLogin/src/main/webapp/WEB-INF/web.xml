@@ -3,6 +3,26 @@
   <display-name>DemoLogin</display-name>
   
   <servlet>
+  	<servlet-name>ShowAddServlet</servlet-name>
+  	<servlet-class>Controller.ShowAddServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowAddServlet</servlet-name>
+  	<url-pattern>/ShowAddServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowAddForm</servlet-name>
+  	<servlet-class>Controller.ShowAddForm</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowAddForm</servlet-name>
+  	<url-pattern>/ShowAddForm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<servlet-name>ShowInfServlet</servlet-name>
   	<servlet-class>Controller.ShowInfServlet</servlet-class>
   </servlet>

@@ -19,7 +19,7 @@ public class TamGiac {
 				System.out.println("Đây là tam giác vuông");
 			else if(a == b && b == c && a == c)
 				System.out.println("Đây là tam giác đều");
-			else if(checkTGC(a, b, c))
+			else if(a == b || b == c || a == c)
 				System.out.println("Đây là tam giác cân");
 			else
 				System.out.println("Đây là tam giác thường");
@@ -27,26 +27,18 @@ public class TamGiac {
 	}
 	
 	private static boolean checkTG(double a, double b, double c) {
-		if(a <= 0 || b <= 0 || c <= 0) {
-			System.out.println("Độ dài các cạnh phải lớn hơn 0");
-			return false;
-		}
-		if(a + b > c && a + c > b && b + c > 0)
+		if(a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > 0)
 			return true;
 		
 		return false;
 	}
 	
 	private static boolean checkTGV(double a, double b, double c) {
-		if(Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)||Math.pow(c, 2) == Math.pow(b, 2) + Math.pow(a, 2)
+		if(Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)||
+			Math.pow(c, 2) == Math.pow(b, 2) + Math.pow(a, 2)
 			||Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2))
 			return true;
-		return false;
-	}
-
-	private static boolean checkTGC(double a, double b, double c) {
-		if(a == b || b == c || c == a)
-			return true;
+		
 		return false;
 	}
 }

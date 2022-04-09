@@ -15,7 +15,7 @@
 	<h2 align="center">Welcome <%= account.getUsername() %></h2>
 	<div align="center">
 		<a href="ShowInfServlet" style="text-decoration: none">Information&emsp;|&emsp;</a>
-		<a href="#" style="text-decoration: none">Add &emsp;|&emsp;</a>
+		<a href="ShowAddServlet" style="text-decoration: none">Add &emsp;|&emsp;</a>
 		<a href="#" style="text-decoration: none">Edit &emsp;|&emsp;</a>
 		<a href="#" style="text-decoration: none">Delete</a>
 	</div>

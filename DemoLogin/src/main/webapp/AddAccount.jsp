@@ -6,14 +6,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Add</title>
-
+<%
+	String error = (String) request.getAttribute("error");
+	if(error == null)
+		error = "";
+%>
 </head>
 <body>
 	<h2 align="center">Add Account</h2>
 	
-	<p style="color: red;" align="center"></p>
+	<p style="color: red;" align="center"><%=error %></p>
 	
-	<form name="LoginForm" action="LoginController" method="post" >
+	<form action="ShowAddForm" method="post" >
 		<div align="center" style="font-size: 20px;">
 			<table>
 				<tr height="40px;">
