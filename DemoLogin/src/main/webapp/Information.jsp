@@ -14,6 +14,7 @@
 </head>
 <body>
 	<h2 align="center">Information</h2>
+	<a href="Home.jsp">Quay lại</a>
 	<label>Name: </label><%=account.getName() %><br>
 	<label>Age: </label><%=account.getAge() %><br>
 	<label>Address: </label><%=account.getAddress() %><br>

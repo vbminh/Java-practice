@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Delete Account</title>
 </head>
 <body>
-
+	<p align="center">Do you want to delete this account?</p>
+	<form action="ShowDelForm" method="post">
+		<div align="center">
+			<input type="submit" name="Submit" value="Submit">
+			&ensp;<input type="reset" name="Cancel" value="Cancel">
+		</div>
+	</form>
 </body>
 </html>

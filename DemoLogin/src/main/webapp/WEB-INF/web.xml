@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>DemoLogin</display-name>
+  <servlet>
+  	<servlet-name>ShowDelServlet</servlet-name>
+  	<servlet-class>Controller.ShowDelServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowDelServlet</servlet-name>
+  	<url-pattern>/ShowDelServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowDelForm</servlet-name>
+  	<servlet-class>Controller.ShowDelForm</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowDelForm</servlet-name>
+  	<url-pattern>/ShowDelForm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowEditServlet</servlet-name>
+  	<servlet-class>Controller.ShowEditServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowEditServlet</servlet-name>
+  	<url-pattern>/ShowEditServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowEditForm</servlet-name>
+  	<servlet-class>Controller.ShowEditForm</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ShowEditForm</servlet-name>
+  	<url-pattern>/ShowEditForm</url-pattern>
+  </servlet-mapping>
   
   <servlet>
   	<servlet-name>ShowAddServlet</servlet-name>

@@ -16,8 +16,8 @@
 	<div align="center">
 		<a href="ShowInfServlet" style="text-decoration: none">Information&emsp;|&emsp;</a>
 		<a href="ShowAddServlet" style="text-decoration: none">Add &emsp;|&emsp;</a>
-		<a href="#" style="text-decoration: none">Edit &emsp;|&emsp;</a>
-		<a href="#" style="text-decoration: none">Delete</a>
+		<a href="ShowEditServlet" style="text-decoration: none">Edit &emsp;|&emsp;</a>
+		<a href="ShowDelServlet" style="text-decoration: none">Delete</a>
 	</div>
 </body>
 </html>

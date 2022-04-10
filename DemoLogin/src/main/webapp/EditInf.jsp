@@ -6,14 +6,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Edit</title>
-
+<%
+	String error = (String) request.getAttribute("error");
+%>
 </head>
 <body>
 	<h2 align="center">Edit Information</h2>
 	
-	<p style="color: red;" align="center"></p>
+	<p style="color: red;" align="center"><%=error %></p>
 	
-	<form name="LoginForm" action="LoginController" method="post" >
+	<form action="ShowEditForm" method="post" >
 		<div align="center" style="font-size: 20px;">
 			<table style="align-content: left;">
 				<tr height="40px;">
