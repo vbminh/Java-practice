@@ -7,7 +7,13 @@
 <meta charset="UTF-8">
 <title>Edit</title>
 <%
+	Account account = (Account) request.getAttribute("account");
+	if(account == null)
+		return;
+	
 	String error = (String) request.getAttribute("error");
+	if(error == null)
+		error = "";
 %>
 </head>
 <body>
@@ -19,12 +25,12 @@
 		<div align="center" style="font-size: 20px;">
 			<table style="align-content: left;">
 				<tr height="40px;">
-					<td width="300px">Name:</td>
-					<td width="300px">Address:</td>
+					<td width="300px">Name: <%=account.getName() %></td>
+					<td width="300px">Address: <%=account.getAddress() %></td>
 				</tr>
 				<tr height="40px;">
-					<td width="300px">Age:</td>
-					<td width="300px">Phone number:</td>
+					<td width="300px">Age: <%=account.getAge() %></td>
+					<td width="300px">Phone number: <%=account.getPhoneNumber() %></td>
 				</tr>
 			</table>
 			<hr align="center" width="600px;">

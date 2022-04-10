@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ShowEditServlet extends HttpServlet{
+public class ShowHomeServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +22,8 @@ public class ShowEditServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		req.setAttribute("account", LoginController.account);
-		RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/EditInf.jsp");
+		RequestDispatcher dis = this.getServletContext().getRequestDispatcher("/Home.jsp");
 		dis.forward(req, resp);
 	}
 }
+
