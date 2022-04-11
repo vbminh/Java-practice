@@ -11,7 +11,7 @@
 	<form action="ShowDelForm" method="post">
 		<div align="center">
 			<input type="submit" name="Submit" value="Submit">
-			&ensp;<input type="reset" name="Cancel" value="Cancel">
+			&ensp;<input type="reset" name="Cancel" value="Cancel" onclick="location.href='ShowHomeServlet'">
 		</div>
 	</form>
 </body>

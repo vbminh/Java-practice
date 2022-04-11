@@ -55,7 +55,7 @@
 				<tr height="40px;">
 					<td colspan="2" align="center">
 						<input type="submit" name="Submit" value="Submit">
-						&ensp;<input type="reset" name="Cancel" value="Cancel">
+						&ensp;<input type="reset" name="Cancel" value="Cancel" onclick="location.href='ShowHomeServlet'">
 					</td>
 				</tr>
 			</table>
